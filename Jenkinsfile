@@ -1,31 +1,31 @@
-pipeline{
+pipeline {
   agent any
-  tools{
+  tools {
     maven 'maven'
   }
-  stages{
+  stages {
     stage('clean'){
       steps{
         sh 'mvn clean'
       }
     }
-    stage('validate'){
-      steps{
+    stage('validate') {
+      steps {
         sh 'mvn validate'
       }
     }
-    stage('compile'){
-      steps{
+    stage('compile') {
+      steps {
         sh 'mvn compile'
       }
     }
-    stage('test'){
-      steps{
+    stage('test') {
+      steps {
         sh 'mvn test'
       }
     }
-    stage('package'){
-      steps{
+    stage('package') {
+      steps {
         sh 'mvn package'
       }
     }
